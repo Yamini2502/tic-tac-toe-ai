@@ -16,7 +16,7 @@ Players can compete against the AI and explore the strengths of each approach.
 - Q-Learning learning curve visualization.
 
 ## Running the Game
-- To lay with Minimax AI: python minimax.py
+- To play with Minimax AI: python minimax.py
 - To play with Alpha-Beta AI: python Alpha_beta.py
 - To run and analyze Q-Learning: python q_learning.py
 

@@ -36,25 +36,25 @@ def reward(state):
         if sum(row) == board_size: 
             return 1  # Positive reward for win
         if sum(row) == -board_size: 
-            return 0  # Negative reward for loss
+            return 0  # No reward for loss
     
     for col in zip(*state):
         if sum(col) == board_size: 
             return 1  # Positive reward for win
         if sum(col) == -board_size: 
-            return 0  # Negative reward for loss
+            return 0  # No reward for loss
     
     if sum(state[i][i] for i in range(board_size)) == board_size: 
         return 1  # Positive reward for win
     if sum(state[i][board_size - 1 - i] for i in range(board_size)) == board_size: 
         return 1  # Positive reward for win
     if sum(state[i][i] for i in range(board_size)) == -board_size: 
-        return 0  # Negative reward for loss
+        return 0  # No reward for loss
     if sum(state[i][board_size - 1 - i] for i in range(board_size)) == -board_size: 
-        return 0  # Negative reward for loss
+        return 0  # No reward for loss
 
     if all(all(cell != 0 for cell in row) for row in state):
-        return -0.1  # Small positive reward for neutral state (tie)
+        return -0.1 
 
     return 0  # Ongoing game
 
